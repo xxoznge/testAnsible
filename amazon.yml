@@ -1,0 +1,10 @@
+- name: Amazon > httpd 설치
+  yum:
+    name: httpd
+    state: present
+
+- name: Amazon > index.html
+  get_url: url=https://www.daum.net dest=/var/www/html/index.html
+
+- name: Amazon > start httpd
+  service: name=httpd state=started

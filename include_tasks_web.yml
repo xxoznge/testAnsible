@@ -1,14 +1,13 @@
----
 - name: web server installation
   hosts: all
   become: yes
   gather_facts: true
 
   tasks:
-    - name: Amazon Linux용 설치 task 포함
+    - name: Amazon tasks
       include_tasks: amazon.yml
       when: ansible_distribution == 'Amazon'
 
-    - name: Ubuntu용 설치 task 포함
+    - name: Ubuntu tasks
       include_tasks: ubuntu.yml
       when: ansible_distribution == 'Ubuntu'
