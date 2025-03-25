@@ -1,26 +1,17 @@
-# VS Code 서버 관련
-.vscode-server/
+# SSH Key
+*.pem
+*.key
+*.crt
+*.pub
 
-# 캐시나 설정 폴더들
-.cache/
-.config/
-.local/
+# Credentials
+*.env
+*.vault
+*.secret
 
-# 시스템 기본 디렉토리
-Desktop/
-Documents/
-Downloads/
-Music/
-Pictures/
-Public/
-Templates/
-Videos/
+# Netplan or system config (예외적)
+netplan.yaml
+/etc/*
 
-# 기타 자동 생성 파일
-.snap/
-.snapd-desktop-integration/
-.sudo_as_admin_successful
-.wget-hsts
-
-# Bash 관련 이력 파일
-.bash_history
+# Logs
+*.log
