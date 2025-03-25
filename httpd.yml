@@ -1,10 +1,16 @@
 - name: Change Apache Port and Reload
   hosts: all
   become: yes
+  gather_facts: yes
   vars_files:
     - vars.yml
 
   tasks:
+    - name: install httpd
+      yum:
+        name: httpd
+        state: present
+
     - name: Change Listen Port in httpd.conf
       lineinfile:
         path: /etc/httpd/conf/httpd.conf

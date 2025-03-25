@@ -1,0 +1,26 @@
+# VS Code 서버 관련
+.vscode-server/
+
+# 캐시나 설정 폴더들
+.cache/
+.config/
+.local/
+
+# 시스템 기본 디렉토리 (보통 필요 없음)
+Desktop/
+Documents/
+Downloads/
+Music/
+Pictures/
+Public/
+Templates/
+Videos/
+
+# 기타 자동 생성 파일
+.snap/
+.snapd-desktop-integration/
+.sudo_as_admin_successful
+.wget-hsts
+
+# Bash 관련 이력 파일
+.bash_history

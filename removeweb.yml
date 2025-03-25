@@ -4,18 +4,18 @@
   gather_facts: true
 
   tasks:
-    - name: Rocky > stop httpd
+    - name: Amazon > stop httpd
       service: name=httpd state=stopped
-      when: ansible_distribution == 'Rocky'
+      when: ansible_distribution == 'Amazon'
 
-    - name: Rocky > remove httpd
-      action: "{{ ansible_pkg_mgr }} name=httpd state=absent"
-      when: ansible_distribution == 'Rocky'
+    - name: Amazon > remove httpd
+      action: "yum name=httpd state=absent"
+      when: ansible_distribution == 'Amazon'
 
     - name: Ubuntu > stop nginx
       service: name=nginx state=stopped
       when: ansible_distribution == 'Ubuntu'
 
     - name: Ubuntu > remove nginx
-      action: "{{ ansible_pkg_mgr }} name=nginx state=absent purge=yes autoremove=yes"
+      action: "apt name=nginx state=absent purge=yes autoremove=yes"
       when: ansible_distribution == 'Ubuntu'
