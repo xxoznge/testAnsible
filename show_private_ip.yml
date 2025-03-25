@@ -1,0 +1,9 @@
+- name: Show private IPs of all servers
+  hosts: all
+  gather_facts: yes
+  become: false
+
+  tasks:
+    - name: Print private IP address
+      debug:
+        msg: "{{ inventory_hostname }} : {{ ansible_default_ipv4.address }}"
