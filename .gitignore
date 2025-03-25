@@ -6,7 +6,7 @@
 .config/
 .local/
 
-# 시스템 기본 디렉토리 (보통 필요 없음)
+# 시스템 기본 디렉토리
 Desktop/
 Documents/
 Downloads/

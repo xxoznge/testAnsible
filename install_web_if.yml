@@ -1,0 +1,15 @@
+- name: Web Server Installation (if version)
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    os: 
+      "{{ 'amazon' if ansible_distribution == 'Amazon'
+         else 'ubuntu' if ansible_distribution == 'Ubuntu'
+         else 'others' 
+         }}"
+
+  tasks:
+    - name: Include tasks based on distribution
+      include_tasks: "{{ os }}.yml"
