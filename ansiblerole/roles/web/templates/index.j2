@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ansible test</title>
+    </head>
+    <body>
+        <center>
+            <p><h2>ANSIBLE TEST PAGE</h2></p>
+            <p>SERVER # : {{idx}}/{{nu}}</p>
+            <p>PRIVATE IP : {{ ansible_eth0.ipv4.address }}</p>
+            <p>OS INFO : {{ ansible_distribution }}:{{ ansible_distribution_version }} </p>
+        </center>
+    </body>
+</html>

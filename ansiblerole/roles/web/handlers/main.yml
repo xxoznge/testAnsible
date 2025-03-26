@@ -1,0 +1,11 @@
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+  when: ansible_distribution == 'Ubuntu' 
+
+- name: restart httpd
+  service:
+    name: httpd
+    state: restarted
+  when: ansible_distribution == 'Amazon'

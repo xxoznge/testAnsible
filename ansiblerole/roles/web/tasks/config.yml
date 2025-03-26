@@ -1,0 +1,9 @@
+- name: index.j2 > index.html 
+  template:
+    src: index.j2
+    dest: /var/www/html/index.html
+    mode: 0644
+    backup: yes
+  notify:
+    - restart nginx
+    - restart httpd

@@ -1,0 +1,7 @@
+- name: Amazon > httpd
+  yum:
+    name: httpd
+    state: present
+    
+- name: Amazon > start httpd
+  service: name=httpd state=started

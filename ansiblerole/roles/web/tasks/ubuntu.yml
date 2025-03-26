@@ -1,0 +1,7 @@
+- name: Ubuntu > nginx
+  apt:
+    name: nginx
+    state: present
+
+- name: Ubuntu > start nginx
+  service: name=nginx state=started

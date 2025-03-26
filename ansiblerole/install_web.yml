@@ -1,0 +1,6 @@
+- name: web server installation
+  hosts: koreaeast
+  become: yes
+  
+  roles:
+    - role: ./roles/web
